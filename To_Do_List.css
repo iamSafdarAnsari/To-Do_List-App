@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(45deg, #ff6f61, #4caf50, #2196f3, #9c27b0);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  color: #5c6bc0;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+input[type="text"] {
+  width: 75%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #ff7043, #e57373);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #f4511e, #d32f2f);
+}
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #fbc02d, #ff7043);
+  color: #333;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff7043, #ffeb3b);
+}
+
+li.completed {
+  background-color: #c8e6c9;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+button.complete,
+button.delete {
+  margin-left: 12px;
+  background: linear-gradient(135deg, #8e44ad, #9b59b6);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+button.complete:hover,
+button.delete:hover {
+  background: linear-gradient(135deg, #5e3370, #7d4c9b);
+}
+
+button.delete {
+  background: linear-gradient(135deg, #e57373, #d32f2f);
+}
+
+button.delete:hover {
+  background: linear-gradient(135deg, #c62828, #f44336);
+}
